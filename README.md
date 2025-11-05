@@ -1,16 +1,72 @@
-# React + Vite
+# Automotive Electric Circuit Trainer (AECT) Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web-based simulation platform designed to teach automotive electrical systems and circuit behavior.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dual Operation Modes**:
+  - System Mode: Realistic vehicle behavior requiring ignition activation
+  - Individual Circuit Mode: Independent testing of each electrical system
 
-## React Compiler
+- **Electrical Systems Simulation**:
+  - Ignition system with power distribution control
+  - Lighting system (headlights, turn indicators, hazard lights, brake lights)
+  - Windshield wiper system with multiple speed settings
+  - Battery charging system with real-time level monitoring
+  - Battery drain simulation when systems are active without charging
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Interactive Visual Interface**:
+  - Real-time circuit board visualization
+  - Animated components (blinkers, wipers)
+  - System status indicators
 
-## Expanding the ESLint configuration
+- **Educational Content**:
+  - Built-in instructions and documentation
+  - Practical exercises for learning objectives
+  - Safety notes and best practices
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+```bash
+npm install
+```
+
+### Running the Application
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Building for Production
+```bash
+npm run build
+```
+
+## Usage
+
+1. Select operation mode (System or Individual Circuit)
+2. In System Mode, activate ignition to enable circuits
+3. Explore each electrical system using the control panel
+4. Observe real-time visual feedback on the circuit board
+5. Complete practical exercises to reinforce learning
+
+## Educational Purpose
+
+This simulator is designed for engineering students at Bowen University and other institutions to learn about automotive electrical systems in a safe, controlled environment without requiring physical vehicle access.
+
+## Technologies Used
+
+- React 18
+- Vite
+- Tailwind CSS
+- Lucide React (icons)
+
+## License
+
+Developed for educational purposes at Bowen University.
