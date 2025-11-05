@@ -72,7 +72,13 @@ const AECTSimulator = () => {
 
   // Battery drain simulation
   useEffect(() => {
-    const isAnySystemActive = headlights !== "off" || leftIndicator || rightIndicator || brakeLight || wiperSpeed !== "off" || hazardLights;
+    const isAnySystemActive =
+      headlights !== "off" ||
+      leftIndicator ||
+      rightIndicator ||
+      brakeLight ||
+      wiperSpeed !== "off" ||
+      hazardLights;
     if (charging || !isAnySystemActive || batteryLevel <= 0) return;
 
     const drainInterval = setInterval(() => {
@@ -80,7 +86,16 @@ const AECTSimulator = () => {
     }, 1000);
 
     return () => clearInterval(drainInterval);
-  }, [charging, headlights, leftIndicator, rightIndicator, brakeLight, wiperSpeed, hazardLights, batteryLevel]);
+  }, [
+    charging,
+    headlights,
+    leftIndicator,
+    rightIndicator,
+    brakeLight,
+    wiperSpeed,
+    hazardLights,
+    batteryLevel,
+  ]);
 
   // System mode dependencies
   const canOperateSystem = (system) => {
@@ -634,16 +649,19 @@ const AECTSimulator = () => {
                       Lighting System
                     </h4>
                     <p className="text-gray-300 mb-2">
-                    Controls headlights (low/high beam), turn indicators, hazard lights, and
-                    brake lights. Headlights cycle through OFF → LOW BEAM →
-                    HIGH BEAM. Turn indicators are mutually exclusive (only one direction at a time) and flash at 500ms intervals.
-                    Hazard lights make both turn signals blink together for emergency situations.
+                      Controls headlights (low/high beam), turn indicators,
+                      hazard lights, and brake lights. Headlights cycle through
+                      OFF → LOW BEAM → HIGH BEAM. Turn indicators are mutually
+                      exclusive (only one direction at a time) and flash at
+                      500ms intervals. Hazard lights make both turn signals
+                      blink together for emergency situations.
                     </p>
                     <p className="text-sm text-gray-400">
-                    <strong>Exercise:</strong> Activate headlights and cycle
-                    through beam settings. Test turn indicators (note only one direction can be active) and hazard lights. Observe
-                    the blinking patterns. Press the brake light button to
-                    simulate braking.
+                      <strong>Exercise:</strong> Activate headlights and cycle
+                      through beam settings. Test turn indicators (note only one
+                      direction can be active) and hazard lights. Observe the
+                      blinking patterns. Press the brake light button to
+                      simulate braking.
                     </p>
                   </div>
 
@@ -931,7 +949,7 @@ const AECTSimulator = () => {
 
         {/* Footer */}
         <div className="mt-6 text-center text-gray-500 text-sm">
-          <p>Automotive Electric Circuit Trainer Simulator v1.0</p>
+          <p>Automotive Electric Circuit Trainer Simulator</p>
           <p>Developed for Engineering Education | Bowen University</p>
         </div>
       </div>
